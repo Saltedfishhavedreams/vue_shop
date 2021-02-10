@@ -1,0 +1,79 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "681163",
+      "name": "垃圾桶",
+      "font_class": "lajitong",
+      "unicode": "e732",
+      "unicode_decimal": 59186
+    },
+    {
+      "icon_id": "3782921",
+      "name": "权限管理",
+      "font_class": "quanxianguanli",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "5437733",
+      "name": "订单管理",
+      "font_class": "dingdanguanli",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "6999484",
+      "name": "信封",
+      "font_class": "tuya-",
+      "unicode": "e757",
+      "unicode_decimal": 59223
+    },
+    {
+      "icon_id": "10704946",
+      "name": "商品管理",
+      "font_class": "shangpinguanlix",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "15096175",
+      "name": "数据统计",
+      "font_class": "shujutongji",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "19818654",
+      "name": "办结事务",
+      "font_class": "banjieshiwu",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "19849031",
+      "name": "passwd",
+      "font_class": "passwd",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "19849033",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "19877120",
+      "name": "保录升学 - 2",
+      "font_class": "yonghu",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    }
+  ]
+}

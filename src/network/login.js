@@ -6,6 +6,7 @@ export function loginData(username, password) {
         params: {
             username,
             password
-        }
-    }, 'POST')
+        },
+        method: 'POST'
+    })
 }

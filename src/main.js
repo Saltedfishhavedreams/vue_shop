@@ -8,10 +8,12 @@ import 'element-ui/lib/theme-chalk/index.css';
 import 'assets/css/global/global.css'
 
 // 导入字体图标
-import 'assets/font/font/iconfont.css'
+import 'assets/font/iconfont.css'
 
 Vue.use(ElementUI)
 Vue.config.productionTip = false
+// 事件总线
+Vue.prototype.$bus = new Vue()
 
 new Vue({
   router,
