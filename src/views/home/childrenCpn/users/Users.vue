@@ -21,7 +21,7 @@
           </el-input>
         </el-col>
         <el-col :span="4">
-          <el-button type="primary">添加用户</el-button>
+          <el-button type="primary" @click="addUser">添加用户</el-button>
         </el-col>
       </el-row>
 
@@ -50,6 +50,7 @@
               type="primary"
               icon="el-icon-edit"
               size="mini"
+              @click="editUser(scope.row.id)"
             ></el-button>
 
             <!-- 删除按钮 -->
@@ -57,6 +58,7 @@
               type="danger"
               icon="el-icon-delete"
               size="mini"
+              @click="delUser(scope.row.id)"
             ></el-button>
 
             <!-- 分配角色 -->
@@ -88,11 +90,24 @@
       >
       </el-pagination>
     </el-card>
+
+    <!-- 添加用户对话框 -->
+    <add @requestDataAgain="getUserData"></add>
+
+    <!-- 编辑用户对话框 -->
+    <edit @requestDataAgain="getUserData"></edit>
+
+    <!-- 删除 -->
+    <delete-user ref="delRef" @requestDataAgain="getUserData"></delete-user>
   </div>
 </template>
 
 <script>
-import Elbreadcurumb from "components/conect/Elbreadcurumb.vue";
+import Elbreadcurumb from "components/conect/breadcurumb/Elbreadcurumb.vue";
+
+import Edit from "./usersChildren/Edit";
+import Add from "./usersChildren/Add";
+import DeleteUser from "./usersChildren/Del";
 
 import { getUserList } from "network/home.js";
 
@@ -100,6 +115,9 @@ export default {
   name: "Users",
   components: {
     Elbreadcurumb,
+    Edit,
+    Add,
+    DeleteUser,
   },
   data() {
     return {
@@ -113,6 +131,8 @@ export default {
       },
       userList: [],
       total: null,
+
+      transfer: false,
     };
   },
   created() {
@@ -158,6 +178,21 @@ export default {
         }
         this.$message.success("状态更新成功!");
       });
+    },
+
+    // 显示添加用户信息面板
+    addUser() {
+      this.$bus.$emit("changeAddVisible");
+    },
+
+    // 显示修改用户信息面板
+    editUser(id) {
+      this.$bus.$emit("changeEditVisible", id);
+    },
+
+    // 删除面板
+    delUser(id) {
+      this.$refs.delRef.delUser(id);
     },
   },
 };

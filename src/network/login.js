@@ -4,8 +4,8 @@ export function loginData(username, password) {
     return request({
         url: '/login',
         params: {
-            username,
-            password
+          username,
+          password
         },
         method: 'POST'
     })
