@@ -70,6 +70,7 @@
             >
               <el-button
                 type="warning"
+                @click="setRole(scope.row)"
                 icon="el-icon-setting"
                 size="mini"
               ></el-button>
@@ -99,6 +100,13 @@
 
     <!-- 删除 -->
     <delete-user ref="delRef" @requestDataAgain="getUserData"></delete-user>
+
+    <!-- 分配角色 -->
+    <assign-roles
+      @userListUpdate="getUserData"
+      :userInfo="userInfo"
+      ref="assignRoleRef"
+    ></assign-roles>
   </div>
 </template>
 
@@ -108,6 +116,7 @@ import Elbreadcurumb from "components/conect/breadcurumb/Elbreadcurumb.vue";
 import Edit from "./usersChildren/Edit";
 import Add from "./usersChildren/Add";
 import DeleteUser from "./usersChildren/Del";
+import AssignRoles from "./usersChildren/AssignRoles";
 
 import { getUserList } from "network/home.js";
 
@@ -118,6 +127,7 @@ export default {
     Edit,
     Add,
     DeleteUser,
+    AssignRoles,
   },
   data() {
     return {
@@ -133,6 +143,9 @@ export default {
       total: null,
 
       transfer: false,
+
+      // 分配角色按钮被点击 所在的对应用户
+      userInfo: {},
     };
   },
   created() {
@@ -193,6 +206,12 @@ export default {
     // 删除面板
     delUser(id) {
       this.$refs.delRef.delUser(id);
+    },
+
+    // 分配权限面板
+    setRole(userInfo) {
+      this.$refs.assignRoleRef.setRoleDialogVisible = true;
+      this.userInfo = userInfo;
     },
   },
 };
