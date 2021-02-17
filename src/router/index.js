@@ -6,8 +6,11 @@ const Login = () => import('views/login/Login.vue')
 const Home = () => import('views/home/Home.vue')
 const Welcome = () => import('views/home/childrenCpn/Welcome.vue')
 const Users = () => import('views/home/childrenCpn/users/Users.vue')
-const Rights = () => import('views/home/childrenCpn/authority/Rights.vue')
-const Roles = () => import('views/home/childrenCpn/roles/Roles.vue')
+const Rights = () => import('views/home/childrenCpn/permissionList/authority/Rights.vue')
+const Roles = () => import('views/home/childrenCpn/permissionList/roles/Roles.vue')
+const GoodsList = () => import('views/home/childrenCpn/goods/GoodsList.vue')
+const GoodsCategory = () => import('views/home/childrenCpn/goods/GoodsCategory.vue')
+const ClassificationParams = () => import('views/home/childrenCpn/goods/ClassificationParams.vue')
 
 Vue.use(VueRouter)
 
@@ -28,7 +31,11 @@ const routes = [
       { path: '/welcome',component: Welcome },
       { path: '/users', component: Users },
       { path: '/rights', component: Rights },
-      { path: '/roles', component: Roles }
+      { path: '/roles', component: Roles },
+      { path: '/roles', component: Roles },
+      { path: '/categories', component: GoodsCategory },
+      { path: '/params', component: ClassificationParams },
+      { path: '/goods', component: GoodsList }
     ]
   }
 ]
