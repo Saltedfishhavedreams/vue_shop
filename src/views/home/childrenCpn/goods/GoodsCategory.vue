@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 面包屑导航区域 -->
-    <elbreadcurumb :titles="['用户管理', '用户列表']" />
+    <elbreadcurumb :titles="['商品管理', '商品分类']" />
 
     <!-- 卡片视图 -->
     <el-card>
