@@ -12,7 +12,9 @@
     "element-ui": "^2.15.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "lodash": "^4.17.11",
     "vue": "^2.6.12",
+    "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.5.1",
     "vue-table-with-tree-grid": "^0.2.4"
   },

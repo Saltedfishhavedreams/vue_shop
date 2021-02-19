@@ -59,7 +59,6 @@ export default {
         this.getLeafKey(role, this.defkeys);
       });
       this.role = role;
-      console.log(111);
     },
 
     // 通过递归 获取角色下所有的三级权限的id 并保存刀defkeys数组中

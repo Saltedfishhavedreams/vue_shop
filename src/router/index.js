@@ -11,6 +11,7 @@ const Roles = () => import('views/home/childrenCpn/permissionList/roles/Roles.vu
 const GoodsList = () => import('views/home/childrenCpn/goods/GoodsList.vue')
 const GoodsCategory = () => import('views/home/childrenCpn/goods/GoodsCategory.vue')
 const ClassificationParams = () => import('views/home/childrenCpn/goods/ClassificationParams.vue')
+const AddGoods = () => import('views/home/childrenCpn/goods/AddGoods.vue')
 
 Vue.use(VueRouter)
 
@@ -35,7 +36,8 @@ const routes = [
       { path: '/roles', component: Roles },
       { path: '/categories', component: GoodsCategory },
       { path: '/params', component: ClassificationParams },
-      { path: '/goods', component: GoodsList }
+      { path: '/goods', component: GoodsList },
+      { path: '/goods/add', component: AddGoods }
     ]
   }
 ]
