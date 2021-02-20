@@ -13,6 +13,7 @@ const GoodsCategory = () => import('views/home/childrenCpn/goods/GoodsCategory.v
 const ClassificationParams = () => import('views/home/childrenCpn/goods/ClassificationParams.vue')
 const AddGoods = () => import('views/home/childrenCpn/goods/AddGoods.vue')
 const Order = () => import('views/home/childrenCpn/order/Order.vue')
+const Report = () => import('views/home/childrenCpn/report/Report.vue')
 
 Vue.use(VueRouter)
 
@@ -46,7 +47,8 @@ const routes = [
       { path: '/params', component: ClassificationParams },
       { path: '/goods', component: GoodsList },
       { path: '/goods/add', component: AddGoods },
-      { path: '/orders', component: Order }
+      { path: '/orders', component: Order },
+      { path: '/reports', component: Report }
     ]
   }
 ]
