@@ -12,9 +12,17 @@ const GoodsList = () => import('views/home/childrenCpn/goods/GoodsList.vue')
 const GoodsCategory = () => import('views/home/childrenCpn/goods/GoodsCategory.vue')
 const ClassificationParams = () => import('views/home/childrenCpn/goods/ClassificationParams.vue')
 const AddGoods = () => import('views/home/childrenCpn/goods/AddGoods.vue')
+const Order = () => import('views/home/childrenCpn/order/Order.vue')
 
 Vue.use(VueRouter)
 
+// 避免冗余导航
+const originalPush = VueRouter.prototype.push
+
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+
+}
 const routes = [
   {
     path: '/',
@@ -37,7 +45,8 @@ const routes = [
       { path: '/categories', component: GoodsCategory },
       { path: '/params', component: ClassificationParams },
       { path: '/goods', component: GoodsList },
-      { path: '/goods/add', component: AddGoods }
+      { path: '/goods/add', component: AddGoods },
+      { path: '/orders', component: Order }
     ]
   }
 ]
